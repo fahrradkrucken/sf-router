@@ -1,0 +1,10 @@
+{
+    "name": "fahrradkrucken/sf-router",
+    "description": "Simple, single-file, dependency-free PHP router.",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SFRouter\\": "src"
+        }
+    }
+}
