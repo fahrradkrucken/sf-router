@@ -54,7 +54,7 @@ class Router
      */
     public function setRequestPath(string $requestPath = '')
     {
-        $this->requestPath = '/' . trim(($requestPath ?? $_SERVER['QUERY_STRING']), ' /');
+        $this->requestPath = '/' . trim(($requestPath ?? $_SERVER['REQUEST_URI']), ' /');
     }
 
     /**
@@ -195,7 +195,6 @@ class Router
      *      'route_callbacks_before' => @var callable[] - Current route's callable's before,
      *      'route_callbacks_after' => @var callable[] - Current route's callable's after,
      * ]
-     *
      */
     public function dispatch(string $requestPath = '', string $requestMethod = ''): array
     {
